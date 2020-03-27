@@ -17,8 +17,12 @@ class Docs extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div
+				className="ui container"
+				style={{ backgroundColor: 'white', width: '210mm', height: '297mm', padding: '80px' }}
+			>
 				<form onSubmit={this.onSubmit}>
+					<h5 style={{ textAlign: 'center' }}>DECLARAȚIE PE PROPRIE RĂSPUNDERE</h5>
 					<div style={{ display: 'flex' }}>
 						<h5>Nume, prenume: </h5>
 						<div style={{ display: 'flex' }}>
@@ -141,9 +145,7 @@ class Docs extends React.Component {
 								<span>6.realizarea de activități agricole</span>
 							</label>
 						</li>
-						<h5>
-							------------------------------------------------------------------------------------------------------
-						</h5>
+						<h5>----------------------------------------------------------------------------</h5>
 						<li>
 							<label>
 								<input
@@ -200,22 +202,25 @@ class Docs extends React.Component {
 						</label>
 					</ul>
 
-					<div style={{ display: 'flex' }}>
-						<h5>
-							Data declarației
-							<input type="date" />
-						</h5>
-
-						<h5>
-							Semnătura
-							<input type="text" />
-						</h5>
+					<div style={{ display: 'flex', padding: '20px' }}>
+						<div style={{ display: 'flex', padding: '20px' }}>
+							<h5>
+								Data declarației
+								<input type="date" />
+							</h5>
+						</div>
+						<div style={{ display: 'flex', padding: '20px' }}>
+							<h5>
+								Semnătura
+								<input type="text" style={{ borderBottom: '2px dotted' }} />
+							</h5>
+						</div>
 					</div>
+					<strong>
+						Persoanele care au împlinit vârsta de 65 de ani completează doar pentru motivele prevăzute în
+						câmpurile 1-6, deplasarea fiind permisă zilnic doar în intervalul orar 11.00 – 13.00.{' '}
+					</strong>
 				</form>
-				<strong>
-					Persoanele care au împlinit vârsta de 65 de ani completează doar pentru motivele prevăzute în
-					câmpurile 1-6, deplasarea fiind permisă zilnic doar în intervalul orar 11.00 – 13.00.{' '}
-				</strong>
 			</div>
 		);
 	}
