@@ -1,4 +1,5 @@
 import React from 'react';
+import CanvasDraw from 'react-canvas-draw';
 
 class Docs extends React.Component {
 	constructor() {
@@ -210,10 +211,10 @@ class Docs extends React.Component {
 							</h5>
 						</div>
 						<div style={{ display: 'flex', padding: '20px' }}>
-							<h5>
-								Semnătura
-								<input type="text" style={{ borderBottom: '2px dotted' }} />
-							</h5>
+							<div>
+								<h5>Semnatura</h5>
+								<CanvasDraw gridColor="white" brushRadius="1" canvasWidth="160px" canvasHeight="43px" />
+							</div>
 						</div>
 					</div>
 					<strong>
